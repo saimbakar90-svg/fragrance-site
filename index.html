@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dubai Luxury Cologne - Fragrance by Muhammad Bin Jamal</title>
+  <!-- Google Fonts: Cinzel (Royal Serif), Plus Jakarta Sans (Modern Body), Amiri (Authentic Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="lang-en">
+
+  <!-- BACKGROUND SCROLL VIDEO CANVAS (Stays pinned full-screen across entire website) -->
+  <div id="canvas-container">
+    <canvas id="perfume-canvas"></canvas>
+  </div>
+
+  <!-- FLOATING MUSIC PLAYER BUTTON -->
+  <button id="floating-music-btn" class="floating-audio-control" title="Toggle Luxury Background Music">
+    <div class="equalizer-bars">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+      <span class="bar bar-4"></span>
+    </div>
+    <span class="audio-text" id="floating-audio-text">Play Ambience</span>
+  </button>
+
+  <!-- WEBSITE CONTENT WRAPPER (100% Transparent elements for clear video visibility) -->
+  <div id="app-wrapper">
+
+    <!-- HEADER NAVIGATION -->
+    <header id="site-header" class="site-header">
+      <!-- Top Promotional Banner -->
+      <div class="top-banner">
+        <div class="top-banner-content">
+          <span class="badge-limited">⚡ Limited Drop</span>
+          <span class="banner-text" id="banner-text">
+            EXCLUSIVE DROP: Only 14 Bottles Left at $1.19 | Free Worldwide Delivery on Orders Today
+          </span>
+        </div>
+      </div>
+
+      <!-- Main Navbar -->
+      <div class="navbar-main">
+        <a href="#hero" class="brand-logo">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <div class="brand-titles">
+            <span class="brand-sub">Haute Parfumerie</span>
+            <div class="brand-name">
+              <span class="brand-name-light">Fragrance</span>
+              <span class="brand-name-italic">by</span>
+              <span class="brand-name-gold">Muhammad Bin Jamal</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-links">
+          <a href="#hero" id="nav-overview">Overview</a>
+          <a href="#olfactory-pyramid" id="nav-notes">Fragrance Notes</a>
+          <a href="#craftsmanship" id="nav-craft">Craftsmanship</a>
+          <a href="#reviews" id="nav-reviews">Reviews (4.9★)</a>
+          <a href="#faqs" id="nav-faqs">FAQ</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <!-- Audio Toggle Button -->
+          <button id="header-music-btn" class="header-action-btn audio-btn" title="Toggle Ambience">
+            <svg class="icon-speaker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <span id="header-music-label">Music</span>
+          </button>
+
+          <!-- Language Toggle Button -->
+          <button id="lang-toggle-btn" class="header-action-btn lang-btn" title="Toggle Language">
+            <span id="lang-label">اردو</span>
+          </button>
+
+          <!-- Cart Button -->
+          <button id="header-cart-btn" class="header-cart-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span class="cart-price">$1.19</span>
+            <span id="cart-count-badge" class="cart-count-badge">1</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN HERO SECTION -->
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="section-container">
+          <div class="hero-grid">
+            
+            <!-- LEFT COLUMN: Brand Title, Accolades & 4 Highlights -->
+            <div class="hero-left-col">
+              
+              <div class="hero-brand-tag">
+                <div class="mini-gold-box">❖</div>
+                <span class="hero-brand-name">Fragrance <em>by</em> <strong>Muhammad Bin Jamal</strong></span>
+              </div>
+
+              <h1 class="hero-title">DUBAI</h1>
+              <div class="hero-subtitle">LUXURY COLOGNE</div>
+              <div class="hero-target">FOR MEN</div>
+
+              <!-- Arabic Filigree Divider -->
+              <div class="filigree-divider">
+                <span class="divider-line"></span>
+                <span class="divider-symbol">❖ ✦ ❖</span>
+                <span class="divider-line"></span>
+              </div>
+
+              <div class="hero-taglines">
+                <div class="tagline-primary" id="tagline-primary">ARABIAN ORIENTAL WOODY SCENT</div>
+                <div class="tagline-secondary" id="tagline-secondary">LONG-LASTING & CAPTIVATING</div>
+              </div>
+
+              <!-- 4 KEY HIGHLIGHTS (TRANSPARENT CARDS) -->
+              <div class="key-features-list">
+                <!-- Feature 1 -->
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <div class="feature-content">
+                    <h4 class="feat-title" data-en="LONG-LASTING" data-ur="طویل مدتی خوشبو">LONG-LASTING</h4>
+                    <p class="feat-desc" data-en="Fragrance that stays with you all day (14+ hours active scent projection)." data-ur="خوشبو جو سارا دن آپ کے ساتھ رہے (14+ گھنٹے تک برقرار)۔">Fragrance that stays with you all day (14+ hours active scent projection).</p>
+                  </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                  </div>
+                  <div class="feature-content">
+                    <h4 class="feat-title" data-en="ARABIAN LUXURY SCENT" data-ur="عربین لگژری مہک">ARABIAN LUXURY SCENT</h4>
+                    <p class="feat-desc" data-en="A perfect blend of oriental spices, royal agarwood and rich amber." data-ur="مشرقی اور ووڈی نوٹس، شاہی عود اور امبر کا شاندار امتزاج۔">A perfect blend of oriental spices, royal agarwood and rich amber.</p>
+                  </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+                  </div>
+                  <div class="feature-content">
+                    <h4 class="feat-title" data-en="PERFECT FOR EVERY OCCASION" data-ur="ہر موقع کے لیے بہترین">PERFECT FOR EVERY OCCASION</h4>
+                    <p class="feat-desc" data-en="Weddings, business meetings, luxury evenings & celebrations." data-ur="شادیوں، کاروباری میٹنگز، پارٹیوں اور خصوصی تقریبات کیلئے۔">Weddings, business meetings, luxury evenings & celebrations.</p>
+                  </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+                  </div>
+                  <div class="feature-content">
+                    <h4 class="feat-title" data-en="IDEAL GIFT FOR HIM" data-ur="مردوں کیلئے لاجواب تحفہ">IDEAL GIFT FOR HIM</h4>
+                    <p class="feat-desc" data-en="Luxurious gift box with gold foil arabesque geometry for your loved one." data-ur="اپنے پیاروں کیلئے شاہکار تحفہ باکس عربی خطاطی کے ساتھ۔">Luxurious gift box with gold foil arabesque geometry for your loved one.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PURCHASE CALL TO ACTION CARD (TRANSPARENT WITH GOLD OUTLINE) -->
+              <div class="purchase-cta-box">
+                <div class="price-row">
+                  <div class="price-details">
+                    <span class="regular-price">Regular Price: $49.99</span>
+                    <div class="current-price-wrap">
+                      <span class="current-price">$1.19</span>
+                      <span class="discount-badge">98% OFF</span>
+                    </div>
+                  </div>
+
+                  <!-- Quantity Selector -->
+                  <div class="quantity-control">
+                    <button id="qty-minus-btn" class="qty-btn" type="button">-</button>
+                    <span id="hero-qty-display" class="qty-num">1</span>
+                    <button id="qty-plus-btn" class="qty-btn" type="button">+</button>
+                  </div>
+                </div>
+
+                <button id="claim-offer-btn" class="btn-claim-gold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                  <span id="claim-offer-text">CLAIM SPECIAL OFFER ($1.19)</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+
+                <div class="cta-perks">
+                  <span class="perk-item">✨ 100ml Eau De Parfum</span>
+                  <span class="perk-item text-green">✓ Free Luxury Gift Box Included</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: BADGES & TEST SPRAY INTERACTION -->
+            <div class="hero-right-col">
+              
+              <!-- Badges Ribbon -->
+              <div class="hero-badges-wrapper">
+                <!-- Seal: High Quality / Long Lasting -->
+                <div class="seal-badge">
+                  <div class="seal-inner">
+                    <span class="seal-top">HIGH QUALITY</span>
+                    <div class="seal-sep"></div>
+                    <span class="seal-bot">LONG LASTING</span>
+                  </div>
+                </div>
+
+                <!-- Price Ribbon -->
+                <div class="price-ribbon-card">
+                  <div class="price-ribbon-inner">
+                    <span class="ribbon-label">ONLY</span>
+                    <span class="ribbon-price">$1.19</span>
+                  </div>
+                  <div class="ribbon-gold-banner">SPECIAL OFFER</div>
+                </div>
+              </div>
+
+              <!-- Interactive Test Spray Glass Container -->
+              <div class="interactive-spray-card">
+                <div class="spray-badge-top">
+                  <span class="live-dot"></span>
+                  <span>100ml.e EAU DE PARFUM 3.4 FL. Oz.</span>
+                </div>
+
+                <div class="spray-action-wrap">
+                  <button id="test-spray-btn" class="btn-test-spray">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                    <span id="spray-btn-text">Test Spray Mist</span>
+                  </button>
+                  <span id="spray-status" class="spray-status-text">Click to experience atomizer mist</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FRAGRANCE OLFACTORY PYRAMID (4-CARD HIGHLIGHT BAR) -->
+          <div id="olfactory-pyramid" class="olfactory-pyramid-banner">
+            <div class="pyramid-frame">
+              <span class="frame-corner top-left">╔</span>
+              <span class="frame-corner top-right">╗</span>
+              <span class="frame-corner bottom-left">╚</span>
+              <span class="frame-corner bottom-right">╝</span>
+
+              <div class="pyramid-grid">
+                
+                <!-- TOP NOTES -->
+                <div class="pyramid-card">
+                  <div class="pyramid-phase">TOP NOTES</div>
+                  <div class="pyramid-img-wrap">
+                    <img src="assets/images/top_notes_fragrance_1789968821379.jpg" alt="Top Notes: Bergamot & Pink Pepper">
+                    <span class="pyramid-duration">0-30 min</span>
+                  </div>
+                  <h4 class="pyramid-ingredients">Bergamot, Pink Pepper, Spices</h4>
+                  <p class="pyramid-desc">Fresh, zesty & aromatic spicy spark</p>
+                </div>
+
+                <!-- MIDDLE NOTES -->
+                <div class="pyramid-card">
+                  <div class="pyramid-phase">MIDDLE NOTES</div>
+                  <div class="pyramid-img-wrap">
+                    <img src="assets/images/middle_notes_scent_1789968833709.jpg" alt="Middle Notes: Coffee & Jasmine">
+                    <span class="pyramid-duration">30m - 4hrs</span>
+                  </div>
+                  <h4 class="pyramid-ingredients">Coffee, Jasmine, Almond</h4>
+                  <p class="pyramid-desc">Warm gourmand heart with velvety flowers</p>
+                </div>
+
+                <!-- BASE NOTES -->
+                <div class="pyramid-card">
+                  <div class="pyramid-phase">BASE NOTES</div>
+                  <div class="pyramid-img-wrap">
+                    <img src="assets/images/base_notes_oud_1789968847441.jpg" alt="Base Notes: Amber & Oud">
+                    <span class="pyramid-duration">4 - 24+ hrs</span>
+                  </div>
+                  <h4 class="pyramid-ingredients">Amber, Oud, Sandalwood, Musk</h4>
+                  <p class="pyramid-desc">Precious royal agarwood & warm honey amber</p>
+                </div>
+
+                <!-- ARABIC CALLIGRAPHY EMBLEM -->
+                <div class="pyramid-card arabic-emblem-card">
+                  <div class="arabic-calligraphy-large">فخامة تدوم</div>
+                  <div class="arabic-gold-line"></div>
+                  <div class="arabic-latin-slogan">LUXURY THAT LASTS</div>
+                  <div class="arabic-seal-text">100% Guaranteed Sillage</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 BOTTOM PILLARS -->
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div class="pillar-info">
+                <h5 class="pillar-title" data-en="PREMIUM QUALITY" data-ur="اعلیٰ ترین معیار">PREMIUM QUALITY</h5>
+                <p class="pillar-desc" data-en="Carefully selected high-quality ingredients" data-ur="انتہائی احتیاط سے منتخب اعلیٰ درجے کے اجزاء">Carefully selected high-quality ingredients</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31"></path><path d="M14 9.3V1.99"></path><path d="M8.5 2h7"></path><path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path><path d="M5.52 16h12.96"></path></svg>
+              </div>
+              <div class="pillar-info">
+                <h5 class="pillar-title" data-en="ALCOHOL BASED" data-ur="پرفیوم آئل بلینڈ">ALCOHOL BASED</h5>
+                <p class="pillar-desc" data-en="Smooth, rich & long-lasting scent projection" data-ur="ہموار، گہری اور دیرپا خوشبو دار ساخت">Smooth, rich & long-lasting scent projection</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 16l-4-4-4 4"></path><path d="M12 12v9"></path><path d="M20 12V8H4v4"></path><path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2"></path><path d="M18 8a6 6 0 0 0-12 0"></path></svg>
+              </div>
+              <div class="pillar-info">
+                <h5 class="pillar-title" data-en="BEAUTIFUL GIFT BOX" data-ur="خوبصورت گفٹ باکس">BEAUTIFUL GIFT BOX</h5>
+                <p class="pillar-desc" data-en="Arabic art design collector box perfect for gifting" data-ur="عربی آرٹ ڈیزائن تحفے دینے کیلئے مثالی">Arabic art design collector box perfect for gifting</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SCENT EXPLORER INTERACTIVE SECTION -->
+      <section id="scent-notes-explorer" class="section-transparent">
+        <div class="section-container">
+          <div class="section-heading">
+            <span class="section-badge">❖ Sensory Architecture</span>
+            <h2 class="section-title" id="scent-title">The Olfactory Symphony</h2>
+            <p class="section-subtitle" id="scent-sub">
+              Engineered across three distinct evaporative stages to project unmatched elegance and presence.
+            </p>
+          </div>
+
+          <!-- Note Tabs -->
+          <div class="scent-tabs">
+            <button class="scent-tab-btn active" data-note="0">
+              <span>Top Notes</span>
+              <span class="tab-duration">0-30 min</span>
+            </button>
+            <button class="scent-tab-btn" data-note="1">
+              <span>Middle Notes</span>
+              <span class="tab-duration">30m-4hrs</span>
+            </button>
+            <button class="scent-tab-btn" data-note="2">
+              <span>Base Notes</span>
+              <span class="tab-duration">4-24+ hrs</span>
+            </button>
+          </div>
+
+          <!-- Interactive Note Details Card -->
+          <div class="scent-display-card" id="scent-display-card">
+            <div class="scent-card-img-wrap">
+              <img id="active-scent-img" src="assets/images/top_notes_fragrance_1789968821379.jpg" alt="Active Scent Note">
+              <span id="active-scent-character" class="scent-character-badge">Fresh, Spicy & Energetic</span>
+            </div>
+
+            <div class="scent-card-info">
+              <span id="active-scent-phase" class="scent-phase-tag">Phase 1 of 3</span>
+              <h3 id="active-scent-name" class="scent-name">Bergamot, Pink Pepper, Spices</h3>
+              <p id="active-scent-desc" class="scent-desc">
+                An invigorating, vibrant opening that sparkles with zesty Italian bergamot and warm piquant pink peppercorns.
+              </p>
+
+              <div class="ingredients-list">
+                <span class="ingredient-badge">✦ Bergamot</span>
+                <span class="ingredient-badge">✦ Pink Pepper</span>
+                <span class="ingredient-badge">✦ Spices</span>
+              </div>
+
+              <div class="scent-metrics">
+                <div class="metric-item">
+                  <span class="metric-label">Evolution</span>
+                  <span id="active-scent-duration" class="metric-value">0 - 30 minutes</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-label">Sillage Reach</span>
+                  <span class="metric-value">2 - 3 Meters</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTISANAL CRAFTSMANSHIP SECTION -->
+      <section id="craftsmanship" class="section-transparent">
+        <div class="section-container">
+          <div class="section-heading">
+            <span class="section-badge">❖ Artisanal Craftsmanship</span>
+            <h2 class="section-title" id="craft-title">Designed to Captivate in Every Detail</h2>
+            <p class="section-subtitle" id="craft-sub">
+              Every element from the weighted bottle cap to the gold-foiled geometric box reflects luxury fragrance standards.
+            </p>
+          </div>
+
+          <div class="craft-grid">
+            <div class="craft-card">
+              <div class="craft-num">Feature 01</div>
+              <h3 class="craft-name">Amber Gradient Flacon</h3>
+              <p class="craft-desc">Forged in ultra-clear crystalline glass with an amber-to-noir tint, preserving delicate natural aromatic oils from UV light.</p>
+              <div class="craft-footer">✓ Quality Inspected</div>
+            </div>
+
+            <div class="craft-card">
+              <div class="craft-num">Feature 02</div>
+              <h3 class="craft-name">Engraved Filigree Collar</h3>
+              <p class="craft-desc">24-karat gold dipped collar featuring authentic Islamic floral arabesque relief, crowned with a weighted dome cap.</p>
+              <div class="craft-footer">✓ 24k Gold Accents</div>
+            </div>
+
+            <div class="craft-card">
+              <div class="craft-num">Feature 03</div>
+              <h3 class="craft-name">Royal Collector Box</h3>
+              <p class="craft-desc">Adorned with gold hot-stamped geometric medallions, Arabic calligraphy ('عَیّار - FMALOL'), and velvet cushion seating.</p>
+              <div class="craft-footer">✓ Gifting Ready</div>
+            </div>
+
+            <div class="craft-card">
+              <div class="craft-num">Feature 04</div>
+              <h3 class="craft-name">Micro-Dispersion Atomizer</h3>
+              <p class="craft-desc">Fine Italian engineered pump nozzle delivering an ultra-fine velvet cloud of 12-micron fragrance droplets for maximum coverage.</p>
+              <div class="craft-footer">✓ 12-Micron Mist</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VERIFIED CUSTOMER REVIEWS -->
+      <section id="reviews" class="section-transparent">
+        <div class="section-container">
+          <div class="reviews-header-grid">
+            <div>
+              <span class="section-badge">★ Verified Reviews</span>
+              <h2 class="section-title" id="reviews-title">Loved by Connoisseurs Worldwide</h2>
+              <p class="section-subtitle">Over 2,840+ satisfied gentlemen have experienced the captivating aroma of Dubai Luxury Cologne.</p>
+            </div>
+
+            <!-- 4.9 Score Box -->
+            <div class="rating-score-box">
+              <div class="score-num">4.9</div>
+              <div class="stars-gold">★★★★★</div>
+              <div class="rating-total">Based on 2,840 ratings</div>
+            </div>
+          </div>
+
+          <!-- Reviews Grid -->
+          <div class="reviews-cards-grid">
+            <div class="review-card">
+              <div class="review-top">
+                <div class="stars-gold">★★★★★</div>
+                <span class="review-date">3 days ago</span>
+              </div>
+              <h4 class="review-title">"Pure royal scent - lasts more than 16 hours!"</h4>
+              <p class="review-comment">The opening of bergamot and pink pepper hits with such refined freshness, and then the dry-down of amber and pure oud is majestic. Everyone at my conference asked what I was wearing.</p>
+              <div class="reviewer-meta">
+                <span class="reviewer-name">Tariq Al-Mansoor</span>
+                <span class="reviewer-loc">✓ Verified Purchase (Dubai, UAE)</span>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-top">
+                <div class="stars-gold">★★★★★</div>
+                <span class="review-date">1 week ago</span>
+              </div>
+              <h4 class="review-title">"Unbelievable deal for $1.19 special offer"</h4>
+              <p class="review-comment">I was skeptical because of the promotional $1.19 price, but when the package arrived, the bottle felt heavy, the magnetic cap snapped into place, and the fragrance smells identical to high-end oriental Dubai perfumes.</p>
+              <div class="reviewer-meta">
+                <span class="reviewer-name">Farhan Malik</span>
+                <span class="reviewer-loc">✓ Verified Purchase (London, UK)</span>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-top">
+                <div class="stars-gold">★★★★★</div>
+                <span class="review-date">2 weeks ago</span>
+              </div>
+              <h4 class="review-title">"The coffee and almond middle note is magical"</h4>
+              <p class="review-comment">The transition from spicy citrus to roasted coffee with almond and oud is pure luxury. Stays on my blazer for 2 whole days. Highly recommended!</p>
+              <div class="reviewer-meta">
+                <span class="reviewer-name">Hamza Rehman</span>
+                <span class="reviewer-loc">✓ Verified Purchase (Lahore, PK)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FREQUENTLY ASKED QUESTIONS SECTION -->
+      <section id="faqs" class="section-transparent">
+        <div class="section-container max-w-4xl">
+          <div class="section-heading">
+            <span class="section-badge">? Help & Inquiries</span>
+            <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about the Dubai Luxury Cologne, formulation, packaging, and shipping.</p>
+          </div>
+
+          <div class="faq-accordion-list">
+            <!-- FAQ 1 -->
+            <div class="faq-item active">
+              <button class="faq-question-btn">
+                <span>How long does Dubai Luxury Cologne last on skin and clothes?</span>
+                <span class="faq-icon">▼</span>
+              </button>
+              <div class="faq-answer-pane">
+                Dubai Luxury Cologne is formulated as an Eau De Parfum (EDP) with an intense 24% oil concentration. It projects strongly for 4 to 6 hours and maintains an intimate sillage on skin for 14+ hours. On clothing and blazers, the deep amber and oud base notes can be detected for up to 48 hours.
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>What makes the scent Arabian and Oriental?</span>
+                <span class="faq-icon">▼</span>
+              </button>
+              <div class="faq-answer-pane">
+                The fragrance combines authentic Middle Eastern distillation traditions: wild agarwood (oud), warm golden amber, and rare spices, harmonized with fresh Mediterranean bergamot and French gourmand notes of roasted coffee and almond.
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>Why is it available for only $1.19?</span>
+                <span class="faq-icon">▼</span>
+              </button>
+              <div class="faq-answer-pane">
+                This is a limited-time exclusive promotional release by Fragrance by Muhammad Bin Jamal to introduce our signature Dubai fragrance line worldwide. The offer is capped at a maximum of 3 bottles per customer while limited promotional inventory lasts.
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>Does the bottle come with the presentation box shown?</span>
+                <span class="faq-icon">▼</span>
+              </button>
+              <div class="faq-answer-pane">
+                Yes! Every single bottle of Dubai Luxury Cologne (100ml / 3.4 FL. Oz.) comes seated inside the custom-designed matte black and gold-foiled arabesque collector box, perfectly ready for gifting.
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>Is this suitable for everyday wear or special occasions?</span>
+                <span class="faq-icon">▼</span>
+              </button>
+              <div class="faq-answer-pane">
+                Both! The fresh bergamot top notes make it crisp enough for daytime professional wear, while the rich amber, coffee, and oud dry-down provides the royal depth needed for weddings, evening galas, and romantic occasions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="section-container">
+          <div class="footer-grid">
+            <div class="footer-brand-info">
+              <div class="footer-logo">
+                <span class="footer-brand-name">Fragrance <em>by</em> <strong>Muhammad Bin Jamal</strong></span>
+              </div>
+              <p class="footer-desc">
+                Curating rare Middle Eastern luxury fragrances and fine goods. The Dubai Luxury Cologne brings centuries of oriental royal oud perfumery into contemporary refined elegance.
+              </p>
+              <div class="footer-arabic">فخامة تدوم — عطر دبي الفاخر للرجال</div>
+              <div class="footer-contact-item">
+                <span class="contact-label">Direct Inquiries:</span>
+                <a href="mailto:saimbakar@gmail.com" class="footer-email-link">
+                  <svg class="email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>saimbakar@gmail.com</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-links-col">
+              <div class="footer-title">Fragrance Profile</div>
+              <a href="#hero">Overview</a>
+              <a href="#olfactory-pyramid">Top, Middle & Base Notes</a>
+              <a href="#craftsmanship">Packaging & Flacon</a>
+              <a href="#reviews">Verified Reviews</a>
+              <a href="#faqs">Fragrance FAQs</a>
+            </div>
+
+            <div class="footer-guarantee-card">
+              <div class="footer-title">Authenticity & Assurance</div>
+              <p class="guarantee-text">Every bottle is authentic 100ml Eau De Parfum (EDP) with 24% perfume oil concentration, accompanied by the sealed presentation collector box.</p>
+              <div class="footer-badge">✨ Free Worldwide Tracked Delivery</div>
+            </div>
+          </div>
+
+          <div class="footer-bottom-row">
+            <div>© 2026 Fragrance by Muhammad Bin Jamal. All Rights Reserved. Dubai Luxury Cologne For Men.</div>
+            <div class="footer-contact-direct">
+              <a href="mailto:saimbakar@gmail.com" class="footer-email-pill">✉ saimbakar@gmail.com</a>
+            </div>
+            <div class="footer-credit">Crafted with pure luxury</div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- STICKY BOTTOM QUICK ORDER BAR -->
+    <aside class="sticky-bottom-bar">
+      <div class="sticky-bar-inner">
+        <div class="sticky-left">
+          <div class="sticky-info-desktop">
+            <span class="sticky-brand">Fragrance by Muhammad Bin Jamal</span>
+            <span class="sticky-product">DUBAI LUXURY COLOGNE (100ml)</span>
+          </div>
+          <div class="sticky-price-wrap">
+            <span class="sticky-price">$1.19</span>
+            <span class="sticky-orig-price">$49.99</span>
+            <span class="sticky-discount">98% OFF</span>
+          </div>
+        </div>
+
+        <div class="sticky-right">
+          <span class="sticky-stock-tag">⚡ Only 14 bottles left</span>
+          <button id="sticky-claim-btn" class="btn-sticky-claim">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span id="sticky-claim-text">CLAIM OFFER ($1.19)</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CART DRAWER MODAL -->
+    <div id="cart-drawer-backdrop" class="modal-backdrop hidden">
+      <div class="cart-drawer">
+        <div class="drawer-header">
+          <div class="drawer-title-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <h3>Your Shopping Bag</h3>
+            <span id="drawer-items-count" class="drawer-badge">1 item</span>
+          </div>
+          <button id="close-cart-btn" class="btn-close-modal">✕</button>
+        </div>
+
+        <div class="drawer-shipping-notice">
+          <span>🚚 <strong>VIP Promotion:</strong> Free Worldwide Tracked Express Delivery Activated!</span>
+        </div>
+
+        <!-- Cart Items List -->
+        <div class="drawer-items-list" id="cart-items-container">
+          <div class="cart-item-row">
+            <div class="cart-item-img-wrap">
+              <img src="assets/images/dubai_luxury_cologne_1789968808545.jpg" alt="Dubai Luxury Cologne 100ml">
+            </div>
+            <div class="cart-item-details">
+              <div class="cart-item-title-row">
+                <h4 class="cart-item-name">DUBAI LUXURY COLOGNE</h4>
+                <button id="remove-cart-item-btn" class="btn-remove-item" title="Remove">🗑</button>
+              </div>
+              <div class="cart-item-desc">ARABIAN ORIENTAL WOODY SCENT</div>
+              <div class="cart-item-size">100ml / 3.4 FL. Oz. • Gift Box Included</div>
+              <div class="cart-item-bottom">
+                <div class="cart-item-price-wrap">
+                  <span id="cart-item-price-display" class="item-price">$1.19</span>
+                  <span class="item-orig-price">$49.99</span>
+                </div>
+                <div class="cart-item-qty-control">
+                  <button id="cart-minus-btn" class="qty-btn">-</button>
+                  <span id="cart-qty-num" class="qty-num">1</span>
+                  <button id="cart-plus-btn" class="qty-btn">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="drawer-footer">
+          <div class="drawer-subtotal-row">
+            <span>Subtotal</span>
+            <span id="drawer-subtotal-display" class="subtotal-val">$1.19</span>
+          </div>
+          <div class="drawer-savings-row">
+            <span>Total Savings</span>
+            <span class="savings-val">-$48.80 (98%)</span>
+          </div>
+          <button id="proceed-checkout-btn" class="btn-proceed-checkout">
+            <span>PROCEED TO CHECKOUT</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKOUT SIMULATOR MODAL -->
+    <div id="checkout-modal-backdrop" class="modal-backdrop hidden">
+      <div class="checkout-modal-card">
+        <button id="close-checkout-btn" class="btn-close-modal checkout-close-btn">✕</button>
+
+        <div id="checkout-form-screen">
+          <div class="checkout-header">
+            <span class="checkout-brand-sub">Fragrance by Muhammad Bin Jamal</span>
+            <h3 class="checkout-title">Complete Your Reservation</h3>
+            <p class="checkout-subtitle">Lock in your promotional price of <strong id="checkout-total-banner">$1.19</strong> for the 100ml Dubai Luxury Cologne.</p>
+          </div>
+
+          <form id="checkout-form" class="checkout-form">
+            <div class="form-group">
+              <label for="cust-name">Full Name</label>
+              <input type="text" id="cust-name" required value="Muhammad Ali" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="cust-email">Email Address</label>
+              <input type="email" id="cust-email" required value="customer@luxuryfragrance.com" class="form-input">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cust-address">Street Address</label>
+                <input type="text" id="cust-address" required value="Palm Jumeirah, Villa 14" class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="cust-city">City / Country</label>
+                <input type="text" id="cust-city" required value="Dubai, UAE" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Payment Method</label>
+              <div class="payment-options">
+                <label class="radio-label">
+                  <input type="radio" name="payment" value="cod" checked> Cash on Delivery / Pay on Arrival
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="payment" value="card"> Credit / Debit Card
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" id="submit-order-btn" class="btn-submit-order">
+              <span>CONFIRM RESERVATION (<span id="submit-order-price">$1.19</span>)</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Success Confirmation Screen -->
+        <div id="checkout-success-screen" class="checkout-success hidden">
+          <div class="success-icon">✓</div>
+          <h3 class="success-title">Order Confirmed!</h3>
+          <p class="success-desc">Thank you! Your luxury collector flacon of Dubai Luxury Cologne has been reserved.</p>
+          <div class="order-id-badge" id="order-id-display">ORDER #DXB-849201</div>
+          <p class="success-note">A confirmation email and tracking link have been dispatched. Estimated delivery: 2-3 business days.</p>
+          <button id="success-close-btn" class="btn-claim-gold mt-4">Continue Browsing</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
